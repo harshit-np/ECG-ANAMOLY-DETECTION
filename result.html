@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+  <div class="preloader">
+  <span></span>
+  <span></span>
+  <span></span>
+  </div>
+  <div class="shadow">
+  </div>
+  </div>
+  <h1>&nbsp Heart Anomaly Detection System <i class="fa fa-heart" aria-hidden="true"></i></h1>
+  
+  <div class="prediction-box">
+      <h2>Result of your ECG: </h2>
+      
+      <p>1. Prediction: : <b>{{predict}}</b></p>
+      <p>2. Model Accuracy:<b>{{predict_prob}}%</b></p>
+      <br><br>
+      <h3>A word of advice</h3>
+      <p>{{out_str}}</p>
+      <br><br>
+    </div>
+  </div>
+  
+  <div class="footer">
+  <p><i>Designed by Himanshu & Harshit</i></p></div>
+
+  <script>
+    document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+          document.querySelector(".prediction-box").style.visibility = "hidden";
+          document.querySelector(".container").style.visibility = "visible";
+        
+    } else {
+      setTimeout(()=>{
+        document.querySelector(".container").style.display = "none";
+        document.querySelector(".prediction-box").style.visibility = "visible";
+        document.querySelector(".prediction-box").style.color = "#bbb";
+      }, 1100);
+    }
+};
+</script>
+</body>
+</html>

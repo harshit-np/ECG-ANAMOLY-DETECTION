@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Drag & Drop or Browse: File Upload | CodingNepal</title> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+  <h1>Heart Anomaly Detection System <i class="fa fa-heart" aria-hidden="true"></i></h1>
+  <div class="dropArea">
+    <div class="drag-area">
+    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+    <header>Drag & Drop to Upload File</header>
+    <span>OR</span>
+    <button>Browse File</button>
+    <input type="file" hidden>
+  </div>
+  <form class="/main" enctype="multipart/form-data" name="dragndrop" action="post">
+  </form>
+
+  </div>
+  <div id="wrapper">
+    <button onclick="document.dragndrop.submit()">Predict</button>
+  </div>
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
